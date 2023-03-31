@@ -10,7 +10,7 @@
 :root{
     --main-color:#2ccdfa;
     --transport-layer:rgb(15 116 143 / 70%);
-    --main-padding:3.75rem;
+    --main-padding:6.25rem;
 }
 html{
     -webkit-scroll-behavior: smooth;
@@ -284,7 +284,8 @@ header .form{
 .services .service{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
-    gap: 30px;
+    grid-row: 60px;
+    grid-column:40px;
 }
 .services .service .serv{
     display: flex;
@@ -316,3 +317,197 @@ header .form{
   
   }
 /* end Services */
+/* start design */
+.design{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+
+    background-image: url("../images/design-features.jpg");
+    height: 600px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.design::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0 0 0 / 60%);
+}
+@media(max-width:768px){
+    .design .img{
+        display: none;
+    }
+}
+.design .img,
+.design .intro-text{
+    position: relative;
+    flex: 1;
+    z-index: 2;
+    
+}
+.design .img{
+   text-align: center;
+   
+}
+.design .img{
+    position: relative;
+    bottom: -150px;
+}
+.design .intro-text{
+    color: white;
+    width: 50%;
+    padding:3.2rem;
+    background-color: var(--transport-layer);
+    color: white;
+}
+.design .intro-text h2{
+    margin-bottom: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.design .intro-text ul li{
+    padding: 1.3rem;
+}
+.design .intro-text ul li::before{
+    font-family: 'font awesome 5 free';
+    content: '\f005';
+    font-weight: 900;
+    margin-right: 1rem;
+}
+/* end design */
+/* start  PORTFOLIO*/
+.portfolo{
+    padding-bottom: calc(var(--main-padding));
+
+}
+.portfolo .container{
+    padding-top: var(--main-padding);
+    padding-bottom: calc(var(--main-padding) - 60px );
+
+}
+.portfolo .shuffle{
+    display: flex;
+    justify-content: center;
+}
+.portfolo .shuffle li{
+    padding: .6rem;
+    text-transform: capitalize;
+}
+.portfolo .shuffle li.active{
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolo .img-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+   
+}
+@media(max-width: 768px){
+    .portfolo .img-container{
+    grid-template-columns: repeat(auto-fill,minmax(800px,1fr));
+
+    }
+}
+.portfolo .img-container img{
+    max-width: 100%;
+    transition: .3s;
+}
+.portfolo .img-container .box:hover  img{
+    transform: rotate(3deg)  scale(1.1)
+}
+.portfolo .img-container .box{
+    position: relative;
+    overflow: hidden;
+}
+.portfolo .img-container .caption{
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1.2rem;
+    width: 100%;
+    font-weight: normal;
+    transition:.3s;
+
+}
+.portfolo .img-container .box:hover .caption{
+    bottom: 0;
+}
+
+.portfolo .img-container .caption h4{
+    margin-bottom: .6rem;
+}
+.portfolo .img-container .caption p{
+    color: var(--main-color);
+}
+.portfolo a{
+    background-color: var(--main-color);
+   display: block;
+   width: fit-content;
+   margin: 30px auto;
+   padding: 15px 20px;
+   color: white;
+   text-transform: capitalize;
+   text-decoration: none;
+
+}
+/* end PORTFOLIO */
+/* start video */
+.video{
+
+    position: relative;
+}
+.video .media{
+    max-width: 100%;
+}
+.video::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0 0 0 / 40%);
+}
+.video .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    width: 100%;
+    padding:3.25rem;
+    background-color: var(--transport-layer);
+    color: white;
+    text-align: center;
+    z-index: 999;
+
+}
+.video .text h2{
+    font-size: 2rem;
+    margin-bottom: 1.9rem;
+    font-weight: normal;
+}
+.video .text p{
+    font-size: 1rem;
+    margin-bottom:1.9rem ;
+}
+.video .text a{
+    background-color:black;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 15px 25px;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+/* end video */

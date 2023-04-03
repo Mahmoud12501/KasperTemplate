@@ -913,3 +913,212 @@ q::after{
     background-color: var(--main-color);
 }
 /* end pricing */
+/* start Subscribe */
+.subscribe{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    position: relative;
+}
+.subscribe::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 40%);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.subscribe .container{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 7777;
+}
+@media(max-width:767px){
+    .subscribe .container{
+        flex-direction: column;
+     
+    }
+}
+.subscribe form{
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+}
+.subscribe form i{
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translateY(50%);
+}
+.subscribe form input[type="email"]{
+    padding: 1.1rem 1.1rem 1.1rem 3rem;
+    background: none;
+    border: 1px solid white;
+    border-right: none;
+    width: calc(100% - 130px);
+    caret-color: var(--main-color);
+    color: white;
+
+}
+.subscribe form input[type="email"]:focus{
+    outline: none;
+}
+.subscribe form input[type="email"]::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.subscribe form input[type="submit"]{
+    width: 130px;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-left: none;
+
+}
+.subscribe p{
+    line-height: 2;
+    margin-left:3rem ;
+}
+@media(max-width:767px){
+    .subscribe p{
+        
+        margin-top:1.5rem ;
+    }
+}
+/* end Subscribe */
+/* start Contact-Us */
+.contact-us{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+
+}
+.contact-us .container .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+.contact-us .container .content{
+    flex-direction: column-reverse;
+    text-align: center;
+}
+}
+.contact-us .container .content form{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    position: relative;
+}
+.contact-us .content form input
+,.contact-us .content form textarea{
+    padding: 1.25rem ;
+    margin-bottom: 1.875rem;
+    border: 1px solid #3333;
+}
+.contact-us .content form textarea{
+    height: 200px;
+}
+.contact-us .content form input:focus
+,.contact-us .content form textarea:focus{
+    outline: none;
+
+}
+.contact-us .content form input::placeholder
+,.contact-us .content form textarea::placeholder{
+    opacity: 1;
+    text-transform: capitalize;
+
+}
+.contact-us .content form input[type="submit"]{
+    width: fit-content;
+    display: flex;
+    margin-left: auto;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+}
+
+.contact-us .container .content .text{
+    flex-basis: 15%;
+}
+.contact-us .container .content .text h4{
+    font-size:1.25rem ;
+    font-weight: normal;
+    margin-bottom: 1.1rem;
+}
+.contact-us .container .content .text span{
+    display: block;
+    color: var(--secondry-color);
+    margin-bottom: 1rem;
+}
+.contact-us .container .content .text h4:nth-of-type(2){
+    margin-top: 5.6rem;
+    margin-bottom: 1.9rem;
+}
+.contact-us .content address{
+    line-height: 1.8;
+    color: var(--secondry-color);
+}
+@media(max-width:768px){
+    .contact-us .content address{
+        margin-bottom: 2.5rem;
+    }
+}
+/* end Contact-Us */
+/* start footer */
+footer{
+    padding-top: calc(var(--main-padding) / 2);
+    padding-bottom: calc(var(--main-padding) / 2);
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    position: relative;
+}
+footer::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+footer .container{
+    position: relative;
+    color: white;
+    z-index: 999;
+    text-align: center;
+}
+footer .head{
+    padding: 20px;
+    margin: 30px auto;
+    width: fit-content;
+    font-size: 22px;
+    border-bottom:1px solid white ;
+    text-transform: uppercase;
+
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+footer ul li{
+    margin-left: 20px;
+}
+footer .copy{
+    text-transform: capitalize;
+}
+footer .copy span{
+    color: var(--main-color);
+}
+/* end footer */
